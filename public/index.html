@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 1 - OTP Email Verification</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .error {
+            color: red;
+        }
+        .success {
+            color: green;
+        }
+        .form-section {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h3>Dela Cruz, Jerimie R.</h3>
+    <h4>08</h4>
+
+    
+    <div class="form-section">
+        <h4>Email Verification with OTP</h4>
+        <form id="emailForm" onsubmit="return sendOTP(event)">
+            <label for="email">Enter your email: </label>
+            <input type="email" id="email" name="email" placeholder="example@domain.com" required>
+            <button type="submit">Send OTP</button>
+        </form>
+        <p id="emailResult"></p>
+    </div>
+
+    
+    <div class="form-section" id="otpSection" style="display: none;">
+        <form id="otpForm" onsubmit="return verifyOTP(event)">
+            <label for="otp">Enter the OTP: </label>
+            <input type="text" id="otp" name="otp" placeholder="Enter 6-digit OTP" required>
+            <button type="submit">Verify OTP</button>
+        </form>
+        <p id="otpResult"></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
